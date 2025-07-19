@@ -24,14 +24,11 @@ public class Main {
         if (!iterator.hasNext()) {
             System.out.println("Herhangi bir şehir bulunmuyor ... ");
         }
-        boolean cikis = false;
+        boolean cikilsinMi = false;
         boolean ileri = true;
 
-
-
-        while (!cikis) {
+        while (!cikilsinMi) {
             System.out.println("Bir işlem seçiniz:");
-
             islem = scanner.nextInt();
 
             switch(islem) {
@@ -40,10 +37,9 @@ public class Main {
                     break;
                 case 1:
                     if (!ileri) {
+                        //bir önceki adımda geri gitmiş ama 1 e bastığı için ileri gitmesi gerekiyor
                         if (iterator.hasNext()) {
-
                             iterator.next();
-
                         }
                         ileri = true;
 
@@ -80,7 +76,7 @@ public class Main {
                     break;
 
                 case 3:
-                    cikis = true;
+                    cikilsinMi = true;
                     System.out.println("Uygulamadan çıkılıyor...");
                     break;
 
